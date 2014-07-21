@@ -39,8 +39,8 @@ function Task(description, priority, list) {
   this.list = list;
   this.id = this.list.tasks.length;
   this.list.tasks.push(this);
-  //this.el = '<li data-id="'+this.id+'"><button class="close">x</button> '+this.description+', '+this.priority+'</li>';
 }
+//instance methods
 Task.prototype = {
   constructor: Task,
   el: function() {
@@ -61,14 +61,14 @@ Task.prototype = {
 
 $(function() { // on document ready
 
-  var $addListForm = $('#add_list'),
-      $listTitleInput = $('#list_title'),
-      $addTaskForm = $('#add_task'),
-      $selectListMenu = $('#select_list'),
-      $taskDescriptionInput = $('#task_description'),
-      $taskPriorityInput = $('#task_priority'),
-      $listArea = $('#lists'),
-      $wrapper = $('#wrapper');
+  // var $addListForm = $('#add_list'),
+  //     $listTitleInput = $('#list_title'),
+  //     $addTaskForm = $('#add_task'),
+  //     $selectListMenu = $('#select_list'),
+  //     $taskDescriptionInput = $('#task_description'),
+  //     $taskPriorityInput = $('#task_priority'),
+  //     $listArea = $('#lists'),
+  //     $wrapper = $('#wrapper');
 
   $addTaskForm.hide(); // initially hide add task form
 
