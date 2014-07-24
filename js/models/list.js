@@ -45,7 +45,7 @@ List.init = function() {
   $wrapper.on('click', '.destroy-list', function(){ //live event listener
     var listId = parseInt($(this).parents('h2').next('ul').data('id'));
     List.all.splice([listId],1,null);
-    $selectListMenu.find('option[value="'+listId+'"]');
+    $selectListMenu.find('option[value="'+listId+'"]').remove();
     $(this).parents('.list').remove();
   });
 };
