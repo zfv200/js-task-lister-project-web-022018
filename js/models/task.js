@@ -39,7 +39,7 @@ Task.init = function() {
     var listId = parseInt($(this).parents('ul').data('id')),
         taskId = parseInt($(this).parent('li').data('id')),
         list = List.all[listId];
-        list.tasks.splice([taskId],1,null);
+        list.tasks.splice(taskId, 1, null);
     $(this).parent('li').remove();
   });
 
