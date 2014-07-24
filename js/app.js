@@ -1,6 +1,8 @@
 // Initialize
 
 $(function() { // on document ready
-  ListsController.init();
-  TasksController.init();
+  listController = new ListsController();
+  listController.init();
+  tasksController = new TasksController();
+  tasksController.init();
 });

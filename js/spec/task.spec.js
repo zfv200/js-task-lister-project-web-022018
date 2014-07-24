@@ -10,28 +10,28 @@ describe("Task Model", function() {
 
     describe("description", function() {
 
-      it("should be assigned when a new Task is created", function() {
+      it("should take a description when the task is created", function() {
         expect(task.description).toBe("Walk the dog");
       });
     });
 
     describe("priority", function() {
 
-      it("should be assigned when a new Task is created", function() {
+      it("should be assigned a priority when a new Task is created", function() {
         expect(task.priority).toBe("high");
       });
     });
 
     describe("id", function() {
 
-      it("should be assigned when a new Task is created", function() {
+      it("should be assigned an autoincremented id when a new Task is created", function() {
         expect(task.id).toBe(0);
       });
     });
 
     describe("list", function() {
 
-      it("should be assigned when a new Task is created", function() {
+      it("should be assigned to a list when a new Task is created", function() {
         expect(task.list.title).toBe("Jon's List");
       });
     });
