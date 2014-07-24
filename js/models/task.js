@@ -1,14 +1,12 @@
 // Task Model
 
 function Task(description, priority, list) {
-  //public properties (instance)
   this.description = description;
   this.priority = priority;
   this.list = list;
   this.id = this.list.tasks.length;
   this.list.tasks.push(this);
 }
-//public methods (instance)
 Task.prototype = {
   constructor: Task,
   el: function() {
@@ -18,7 +16,6 @@ Task.prototype = {
     $('#list-'+this.list.id).append(this.el());
   }
 };
-// static properties (class)
 Task.init = function() {
 
   var $addTaskForm = $('#add_task'),

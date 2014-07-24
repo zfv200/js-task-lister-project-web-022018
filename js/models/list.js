@@ -1,13 +1,11 @@
 // List Model
 
 function List(title) {
-  //public properties (instance)
   this.id = this.constructor.all.length;
   this.constructor.all.push(this);
   this.title = title;
   this.tasks = [];
 }
-//public methods (instance)
 List.prototype = {
   constructor: List,
   listEle: function() {
@@ -21,7 +19,6 @@ List.prototype = {
      $('#select_list').append(this.optionEle());
   }
 };
-//static properties & methods (class)
 List.all = [];
 List.init = function() {
 
