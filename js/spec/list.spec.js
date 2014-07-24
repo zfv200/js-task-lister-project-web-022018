@@ -2,11 +2,13 @@ describe("List Model", function() {
 
   describe("Constructor Properties", function() {
 
+
     describe("all", function() {
 
-      it("should have an 'all' property to hold instances", function() {
+      it("should have an 'all' property to hold instances of each list created", function() {
         expect(List.all).toEqual([]);
       });
+
     });
 
   }); //end Constructor Properties
