@@ -20,9 +20,9 @@ Create an object oriented task list.  You're going to need to build a basic all 
 5. Open index.html in your browser to see the functionality. Don't forget to have dev tools debugger / console open as well to see errors.
 6. Make the tests pass in js/spec/ by writing the code neccesary in js/models and js/controllers.
 
-For comparison here is a live example of the finished app [linked here](http://flatiron-school-curriculum.github.io/js-oo-task-list/).
+For comparison here is a live example of the finished app [linked here](http://flatiron-school-curriculum.github.io/fe-js-oo-task-list/).
 
 ## Resources
 
  * [Jasmine 2.0 Documentation](http://jasmine.github.io/2.0/introduction.html)
- * [Finshed Example of App Here](http://flatiron-school-curriculum.github.io/js-oo-task-list/)
+ * [Finshed Example of App Here](http://flatiron-school-curriculum.github.io/fe-js-oo-task-list/)
