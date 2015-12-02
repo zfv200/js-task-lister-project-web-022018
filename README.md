@@ -26,3 +26,5 @@ For comparison here is a live example of the finished app [linked here](http://l
 
  * [Jasmine 2.0 Documentation](http://jasmine.github.io/2.0/introduction.html)
  * [Finshed Example of App Here](http://learn-co-curriculum.github.io/fe-js-oo-task-list/)
+
+<a href='https://learn.co/lessons/fe-js-oo-task-list' data-visibility='hidden'>View this lesson on Learn.co</a>
