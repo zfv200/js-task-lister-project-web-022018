@@ -9,8 +9,8 @@ type: lab
 
 ## Instructions:
 
-Create an object oriented task list.  You're going to need to build a basic all front end app.  There will be no persitence.  However, you will need two models, one for List(s) and Task(s).  These models will need autoincrementing IDs as well as some "class" methods.  These models will talk to their matching controllers, ListController and TaskController.  The controllers job is to interact with the DOM (think jQuery and rails controllers that make instances to help the views).  However your controllers will be adding the elements themselves to the DOM instead of the views.
-
+Create an object oriented task list.  You're going to need to build a basic all front end app.  There will be no persitence.  However, you will need two models, one for List(s) and Task(s).  These models will need autoincrementing IDs as well as some "class" methods.  You will then need write a function to add new lists and add new tasks into the DOM. To begin, you can include this login in `app.js`.  
+ 
 ## Steps
 
 1. Fork this repository.

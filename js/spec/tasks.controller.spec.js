@@ -1,3 +1,0 @@
-describe("Tasks Controller", function(){
-  
-});

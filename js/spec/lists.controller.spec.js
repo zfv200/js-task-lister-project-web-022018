@@ -1,3 +1,0 @@
-describe("Lists Controller", function() {
-  
-});
