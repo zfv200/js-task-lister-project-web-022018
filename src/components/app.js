@@ -32,7 +32,16 @@ class App {
     this.render()
   }
 
-  createNewTask() {}
+  createNewTask() {
+    event.preventDefault()
+    const parentId = this.parentListDropdown.options[this.parentListDropdown.selectedIndex].dataset.id //we can find the selected option then grab the id stored as a dataset
+    const parentList = this.lists.find(list => list.id == parentId) //because parentId is a string, we can utilize JS == type coersion to compare int to string
+    const newTask = new Task(++parentList.taskIds, this.newTaskDescription.value, this.newTaskPriority.value) //create a new Task instance
+    parentList.tasks.push(newTask) //.push() that onto the correct list
+
+    event.target.reset() //clear the form inputs
+    this.render() //re-render the app
+  }
 
   deleteList() {}
 
