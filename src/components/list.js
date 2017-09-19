@@ -7,7 +7,7 @@ class List {
     this.id = id
     this.title = title
     this.tasks = []
-    console.log(this);
+    // console.log(this);
   }
 
   render() {

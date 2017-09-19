@@ -39,8 +39,16 @@ class App {
   render() {
     this.lists.length === 0 ? this.createTaskForm.style.display = "none" : this.createTaskForm.style.display = "block"
 
-    const listHTML = this.lists.map(list => list.render()).join("")
-    this.listsSection.innerHTML = listHTML
+    let listHTML = []
+    let dropdownHTML = []
+
+    this.lists.forEach(list => {
+      listHTML.push(list.render())
+      dropdownHTML.push(`<option data-id="${list.id}">${list.title}</option>`)
+    })
+
+    this.parentListDropdown.innerHTML = dropdownHTML.join("")
+    this.listsSection.innerHTML = listHTML.join("")
   }
 
 }
