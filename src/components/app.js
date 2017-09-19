@@ -1,5 +1,6 @@
 class App {
   constructor() {
+    this.listIds = 0
     this.lists = []
     this.initializeEventListeners() //grab DOM elements and attach event listeners
     this.render()
@@ -17,12 +18,19 @@ class App {
     this.listsSection = document.getElementById("lists")//section of page where lists will be rendered to
 
     //attach event listeners
-    this.createListForm.addEventListener("submit", this.createNewList)
-    this.createTaskForm.addEventListener("submit", this.createNewTask)
-    this.listsSection.addEventListener("click", this.deleteList)
+    this.createListForm.addEventListener("submit", this.createNewList.bind(this))
+    this.createTaskForm.addEventListener("submit", this.createNewTask.bind(this))
+    this.listsSection.addEventListener("click", this.deleteList.bind(this))
+    // bind `this` so it refers to app class instance instead of the HTML element listening for event; could also be solved with arrow fn: this.createListForm.addEventListener("submit", () => this.createNewList()) where the => fn binds for us NOTE that we have to CALL this.createNewList() in the arrow fn
   }
 
-  createNewList() {}
+  createNewList() {
+    event.preventDefault() //event implicitly passed to handler by listener
+    const newList = new List(++this.listIds, this.newListTitle.value)
+    this.lists.push(newList)
+    event.target.reset()
+    this.render()
+  }
 
   createNewTask() {}
 
@@ -30,6 +38,9 @@ class App {
 
   render() {
     this.lists.length === 0 ? this.createTaskForm.style.display = "none" : this.createTaskForm.style.display = "block"
+
+    const listHTML = this.lists.map(list => list.render()).join("")
+    this.listsSection.innerHTML = listHTML
   }
 
 }
