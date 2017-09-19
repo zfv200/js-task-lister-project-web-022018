@@ -39,7 +39,7 @@ class App {
     const newTask = new Task(++parentList.taskIds, this.newTaskDescription.value, this.newTaskPriority.value) //create a new Task instance
     parentList.tasks.push(newTask) //.push() that onto the correct list
 
-    event.target.reset() //clear the form inputs
+    this.newTaskDescription //clear the form inputs
     this.render() //re-render the app
   }
 
@@ -58,6 +58,7 @@ class App {
 
     this.parentListDropdown.innerHTML = dropdownHTML.join("")
     this.listsSection.innerHTML = listHTML.join("")
+    console.log(this);
   }
 
 }
