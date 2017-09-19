@@ -14,8 +14,8 @@ class List {
   render() {
     return (`
         <div class="list">
-          <h2><button class="delete-list">X</button>${this.title}</h2>
-          <ul id="list-${this.id}" data-id="${this.id}">
+          <h2><button data-id="${this.id}" class="delete-list">X</button>${this.title}</h2>
+          <ul>
             ${this.renderAllTasks()/*return a string of all task HTML*/}
           </ul>
         </div>

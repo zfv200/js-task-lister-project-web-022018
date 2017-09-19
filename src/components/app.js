@@ -39,14 +39,20 @@ class App {
     const newTask = new Task(++parentList.taskIds, this.newTaskDescription.value, this.newTaskPriority.value) //create a new Task instance
     parentList.tasks.push(newTask) //.push() that onto the correct list
 
-    this.newTaskDescription //clear the form inputs
+    event.target.reset() //clear the form inputs
     this.render() //re-render the app
   }
 
-  deleteList() {}
+  deleteList() {
+    if (event.target.className === "delete-list") {
+      const listId = parseInt(event.target.dataset.id)
+      this.lists = this.lists.filter(list => list.id !== listId) //remove that list from this.lists
+    }
+    this.render() //update the page to reflect the changes made in memory
+  }
 
   render() {
-    this.lists.length === 0 ? this.createTaskForm.style.display = "none" : this.createTaskForm.style.display = "block"
+    this.lists.length === 0 ? this.createTaskForm.style.display = "none" : this.createTaskForm.style.display = "block" //hide the new task form if there are no lists to associate it with
 
     let listHTML = []
     let dropdownHTML = []
@@ -58,7 +64,7 @@ class App {
 
     this.parentListDropdown.innerHTML = dropdownHTML.join("")
     this.listsSection.innerHTML = listHTML.join("")
-    console.log(this);
+    console.log(this)
   }
 
 }
