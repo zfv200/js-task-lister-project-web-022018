@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Flatiron Task Lister</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+  <!-- <script src="node_modules/mocha/mocha.js"></script>
+  <script src="node_modules/chai/chai.js"></script>
+  <script src="node_modules/sinon/pkg/sinon.js"></script> -->
+  <!-- <script src="test/taskTest.js"></script>
   <script src="src/components/task.js"></script>
   <script src="src/components/list.js"></script>
   <script src="src/components/app.js"></script>
-  <script src="src/index.js"></script>
+  <script src="src/index.js"></script> -->
+  <!-- <script src="node_modules/learn-browser/learnBrowser.min.js"></script> -->
 
 </head>
 <body>
+   <!-- <div id="mocha"></div>
+   <script>mocha.setup('bdd');</script> -->
+   <!-- the above two lines are for the tests DON'T DELETE THEM -->
+
   <div id="main-content">
     <h1>Flatiron Task Lister</h1>
 
@@ -32,6 +43,28 @@
 
     <section id="lists"></section>
 
+
+    <!-- <div> for Mocha to display test results. -->
+    <div id="mocha"></div>
+
+    <!-- Include Mocha and set it up for BDD-style testing. -->
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd');</script>
+
+    <!-- Include Chai as the matcher library. -->
+    <script src="node_modules/chai/chai.js"></script>
+
+    <!-- Include the student's JavaScript file(s). -->
+    <script src="/src/components/task.js"></script>
+    <script src="/src/components/list.js"></script>
+    <script src="/src/components/app.js"></script>
+    <script src="/src/index.js"></script>
+
+    <!-- Include the JavaScript file(s) containing the tests. -->
+    <script src="test/taskTest.js"></script>
+
+    <!-- Include Flatiron School's minified test runner to push results to Learn. -->
+    <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
   </div><!-- #main-content -->
 </body>
 </html>

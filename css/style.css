@@ -108,3 +108,7 @@ button {
 	line-height: 22px;
 	margin-bottom: 10px;
 }
+
+#mocha {
+	background-color: black;
+}
