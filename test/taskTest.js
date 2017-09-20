@@ -1,7 +1,3 @@
-const expect = chai.expect;
-
-// TODO: Write tests!
-
 describe("task.js", () => {
   describe("Task Class", () => {
     const newTask = new Task(1, "Eat Pizza Hut", "High");
