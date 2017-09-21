@@ -3,7 +3,7 @@ const expect = chai.expect;
 describe("app.js", () => {
   describe("App Class", () => {
 
-    it("should initialize with an array of lists", () => {
+    it("should have a constructor", () => {
       expect(App.constructor).to.be.a("function");
     });
 

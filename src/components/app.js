@@ -1,9 +1,7 @@
 class App {
   constructor() {
-    this.listIds = 0
     this.lists = []
     this.initializeEventListeners() //grab DOM elements and attach event listeners
-    this.render()
   }
 
   initializeEventListeners() {
@@ -26,7 +24,7 @@ class App {
 
   createNewList() {
     event.preventDefault() //event implicitly passed to handler by listener
-    const newList = new List(++this.listIds, this.newListTitle.value)
+    const newList = new List(this.newListTitle.value)
     this.lists.push(newList)
     event.target.reset()
     this.render()
@@ -36,7 +34,7 @@ class App {
     event.preventDefault()
     const parentId = this.parentListDropdown.options[this.parentListDropdown.selectedIndex].dataset.id //we can find the selected option then grab the id stored as a dataset
     const parentList = this.lists.find(list => list.id == parentId) //because parentId is a string, we can utilize JS == type coersion to compare int to string
-    const newTask = new Task(++parentList.taskIds, this.newTaskDescription.value, this.newTaskPriority.value) //create a new Task instance
+    const newTask = new Task(this.newTaskDescription.value, this.newTaskPriority.value) //create a new Task instance
     parentList.tasks.push(newTask) //.push() that onto the correct list
 
     event.target.reset() //clear the form inputs
