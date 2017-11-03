@@ -1,20 +1,13 @@
 
-# JS Test Driven Task List
+# JS Behavior Driven Task Lister
 
-## Instructions:
+Here is an example of the [working app](https://learn-co-curriculum.github.io/js-task-lister-project/)
 
-For this project, you'll be building out a Task Lister application. We'll be using good OO design patterns to build out our Client Side app. To start, there will be no persistence.  However, you will need three components, one for List(s), Task(s), and an App parent component.  These models will need auto-incrementing IDs as well as some "class" methods.  You will then need write a function to add new lists and add new tasks into the DOM.
+Your task is to recreate this using Behavior Driven Development.
 
-## Step 1: Setup
+This project is likely larger than anything you have tackled thus far. **Work slowly and iteratively**. Often this means to get a specific feature working in a purely functional way and then refactor to an OO approach.  If your group can manage to build out all the functionality without creating instances, more power to you, but it is *very likely that at some point you are going to wish you could say* `list.tasks`. This is your world, build a structure that works for you. 
 
-1. Fork this repository.
-2. Clone your fork locally.
-3. cd into the local repos folder.
-4. from your terminal, run `npm test`
-5. The tests will be displayed on the page. This app is also hot reloading so every time you save a file, the page will refresh and the tests will re-run in the browser
+(i.e. a `list` has many `tasks`, `task` belongs to a `list`)
 
-## Step 2: Models
-
-Next, implement the models for Task and List. A List should have many tasks associated with it.
 
 <a href='https://learn.co/lessons/fe-js-oo-task-list' data-visibility='hidden'>View this lesson on Learn.co</a>
