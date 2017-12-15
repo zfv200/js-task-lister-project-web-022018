@@ -1,5 +1,5 @@
 
-
+<!-- TODO: more detailed readme -->
 # JS Test Driven Task List
 
 ## Instructions:
@@ -11,8 +11,8 @@ For this project, you'll be building out a Task Lister application. We'll be usi
 1. Fork this repository.
 2. Clone your fork locally.
 3. cd into the local repos folder.
-4. from your terminal, run `npm test`
-5. The tests will be displayed on the page. This app is also hot reloading so every time you save a file, the page will refresh and the tests will re-run in the browser
+4. from your terminal, run `learn`
+
 
 ## Step 2: Models
 
