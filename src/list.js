@@ -4,7 +4,6 @@ class List {
 
     this.title = title;
     this.tasks = [];
-    this.render();
   }
 
   addTask(description, priority) {
@@ -26,5 +25,3 @@ class List {
       `);
   }
 }
-
-List.all = [];
