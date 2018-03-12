@@ -1,9 +1,10 @@
 class List {
   constructor(title) {
-    if (!title) throw new Error("Lists mus have titles");
+    if (!title) throw new Error("Lists must have titles");
 
     this.title = title;
     this.tasks = [];
+    this.render();
   }
 
   addTask(description, priority) {
@@ -18,10 +19,12 @@ class List {
 
   render() {
     return (`
-      <div class="list">
-        <h2><button class="delete-list">X</button></h2>
+      <div>
+        <h2>${this.title}<button class="delete-list">X</button></h2>
         <ul>${this.renderTasks()}</ul>
       </div>
-        `);
+      `);
   }
 }
+
+List.all = [];
