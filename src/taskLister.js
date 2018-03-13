@@ -1,11 +1,34 @@
 class TaskLister {
   constructor() {
     this.lists = [];
+    this.activeList = null;
+    this.newDescription = null;
+    this.newPriority = null;
   }
 
   handleNewList(title) {
     const newList = new List(title);
     this.lists.push(newList);
+    this.activeList = newList;
+  }
+
+  handleSelectChange(list) {
+    this.activeList = this.lists.find(l => l.title === list);
+    console.log(this.activeList);
+  }
+
+  handleDescriptionChange(description) {
+    this.newDescription = description;
+  }
+
+  handlePriorityChange(priority) {
+    this.newPriority = priority;
+  }
+
+  handleNewTask() {
+    this.activeList.addTask(this.newDescription, this.newPriority);
+    this.newDescription = null;
+    this.newPriority = null;
   }
 
   renderOptions() {
@@ -23,6 +46,13 @@ class TaskLister {
         <select id="parent-list">
           ${this.renderOptions()}
         </select>
+
+        <label for="new-task-description">Task description:</label>
+        <input type="text" id="new-task-description" placeholder="description">
+
+        <label for="new-task-priority">Priority level:</label>
+        <input type="text" id="new-task-priority" placeholder="priority">
+        <input type="submit" value="Create New Task"></input>
         </form>
         <div id="lists">
           ${this.renderLists()}
@@ -30,14 +60,3 @@ class TaskLister {
       `);
   }
 }
-
-//
-// <form id="create-task-form" action="#" method="post">
-//   <label for="parent-list">Select List:</label>
-//   <select id="parent-list" name="parent-list"></select>
-//   <label for="new-task-description">Task description:</label>
-//   <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-//   <label for="new-task-priority">Priority level:</label>
-//   <input type="text" id="new-task-priority" name="new-task-priority" placeholder="priority">
-//   <input type="submit" value="Create New Task">
-// </form><!-- #create-task-form -->

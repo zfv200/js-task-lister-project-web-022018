@@ -9,7 +9,6 @@ class List {
   addTask(description, priority) {
     const newTask = new Task(description, priority);
     this.tasks.push(newTask);
-    this.render();
   }
 
   renderTasks() {
