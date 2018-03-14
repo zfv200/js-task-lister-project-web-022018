@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.id === "new-task-priority") app.handlePriorityChange(e.target.value);
   });
 
+  listDiv.addEventListener("click", e => {
+    if (e.target.className === "delete-list") app.deleteList(e.target.dataset.title);
+    listDiv.innerHTML = app.render();
+  });
+
   listDiv.addEventListener("submit", e => {
     e.preventDefault();
     app.handleNewTask();

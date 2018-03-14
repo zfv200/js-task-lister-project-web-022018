@@ -18,7 +18,9 @@ class List {
   render() {
     return (`
       <div>
-        <h2>${this.title}<button class="delete-list">X</button></h2>
+        <h2>${this.title}
+          <button data-title="${this.title}" class="delete-list">X</button>
+        </h2>
         <ul>${this.renderTasks()}</ul>
       </div>
       `);

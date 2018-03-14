@@ -14,7 +14,6 @@ class TaskLister {
 
   handleSelectChange(list) {
     this.activeList = this.lists.find(l => l.title === list);
-    console.log(this.activeList);
   }
 
   handleDescriptionChange(description) {
@@ -29,6 +28,10 @@ class TaskLister {
     this.activeList.addTask(this.newDescription, this.newPriority);
     this.newDescription = null;
     this.newPriority = null;
+  }
+
+  deleteList(listTitle) {
+    this.lists = this.lists.filter(({ title }) => title !== listTitle);
   }
 
   renderOptions() {
