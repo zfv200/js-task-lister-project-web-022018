@@ -14,7 +14,6 @@ class TaskLister {
 
   handleSelectChange(list) {
     this.activeList = this.lists.find(l => l.title === list);
-    console.log(this.activeList);
   }
 
   handleDescriptionChange(description) {
@@ -33,11 +32,16 @@ class TaskLister {
 
   deleteList(listTitle) {
     this.lists = this.lists.filter(({ title }) => listTitle !== title);
-    console.log(this.lists);
   }
 
   renderOptions() {
-    return this.lists.map(list => `<option value="${list.title}">${list.title}</option>`).join("");
+    return this.lists.map(({ title }) =>
+      (`
+        <option value="${title}" ${this.activeList.title === title ? "selected" : ""}>
+          ${title}
+        </option>`
+      )
+    ).join("");
   }
 
   renderLists() {
