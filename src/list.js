@@ -19,10 +19,14 @@ class List {
     return (`
       <div>
         <h2>${this.title}
-          <button data-title="${this.title}" class="delete-list">X</button>
+          <button data-title="${this.title}" class="delete-list">
+            X
+          </button>
         </h2>
-        <ul>${this.renderTasks()}</ul>
+        <ul>
+          ${this.renderTasks()}
+        </ul>
       </div>
-      `);
+    `);
   }
 }

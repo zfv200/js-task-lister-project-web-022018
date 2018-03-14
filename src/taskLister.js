@@ -32,39 +32,41 @@ class TaskLister {
 
   deleteList(listTitle) {
     this.lists = this.lists.filter(({ title }) => listTitle !== title);
+    this.activeList = this.lists[0];
   }
 
   renderForm() {
     if (this.lists.length) {
       return (`
-          <form id="create-task-form">
-            <label for="parent-list">Select List:</label>
-            <select id="parent-list">
-              ${this.renderOptions()}
-            </select>
+        <form id="create-task-form">
+          <label for="parent-list">Select List:</label>
+          <select id="parent-list">
+            ${this.renderOptions()}
+          </select>
 
-            <label for="new-task-description">Task description:</label>
-            <input required type="text" id="new-task-description" placeholder="description">
+          <label for="new-task-description">Task description:</label>
+          <input required type="text" id="new-task-description" placeholder="description">
 
-            <label for="new-task-priority">Priority level:</label>
-            <input type="text" id="new-task-priority" placeholder="priority">
-            <input type="submit" value="Create New Task"></input>
-          </form>
-          `);
+          <label for="new-task-priority">Priority level:</label>
+          <input type="text" id="new-task-priority" placeholder="priority">
+          <input type="submit" value="Create New Task"></input>
+        </form>
+      `);
     } else {
       return "";
     }
   }
 
   renderOptions() {
-    return this.lists.map(({ title }) => (`
-          <option value="${title}"
-            ${this.activeList.title === title ? "selected" : ""}
-          >
-            ${title}
-          </option>
-        `))
-      .join("");
+    return this.lists.map(({ title }) => {
+      return (`
+        <option value="${title}"
+          ${this.activeList.title === title ? "selected" : ""}
+        >
+          ${title}
+        </option>
+      `)
+    }).join("");
   }
 
   renderLists() {
@@ -73,10 +75,10 @@ class TaskLister {
 
   render() {
     return (`
-        ${this.renderForm()}
-        <div id="lists">
-          ${this.renderLists()}
-        </div>
-      `);
+      ${this.renderForm()}
+      <div id="lists">
+        ${this.renderLists()}
+      </div>
+    `);
   }
 }

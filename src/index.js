@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const listDiv = document.getElementById("app-content");
 
   const app = new TaskLister();
+  const renderApp = () => listDiv.innerHTML = app.render();
 
   newListForm.addEventListener("submit", e => {
     e.preventDefault();
     app.handleNewList(newListTitle.value);
-    listDiv.innerHTML = app.render();
+    renderApp();
     e.target.reset();
   });
 
@@ -21,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
   listDiv.addEventListener("click", e => {
     if (e.target.className === "delete-list") {
       app.deleteList(e.target.dataset.title);
-      listDiv.innerHTML = app.render();
+      renderApp();
     }
   });
 
   listDiv.addEventListener("submit", e => {
     e.preventDefault();
     app.handleNewTask();
-    listDiv.innerHTML = app.render();
+    renderApp();
     e.target.reset();
   });
 });
