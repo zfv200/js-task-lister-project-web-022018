@@ -39,6 +39,11 @@ class TaskLister {
     this.activeList = this.lists[0];
   }
 
+  deleteTask(listTitle, taskDescription) {
+    const targetList = this.lists.find(({ title }) => title === listTitle);
+    targetList.deleteTask(taskDescription);
+  }
+
   renderForm() {
     if (this.lists.length) {
       return (`

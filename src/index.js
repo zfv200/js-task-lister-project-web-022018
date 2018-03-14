@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.className === "delete-list") {
       app.deleteList(e.target.dataset.title);
       renderApp();
+    } else if (e.target.className === "delete-task") {
+      app.deleteTask(e.target.dataset.listTitle, e.target.dataset.taskName);
+      renderApp();
     }
   });
 

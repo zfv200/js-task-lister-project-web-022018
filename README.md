@@ -48,55 +48,63 @@ templates for your markup:
 
 #### List
 ```html
-<div id="lists">        
-  <!-- begin list 1 -->
+<div id="lists">  
+<!-- begin list 1 -->
   <div>
     <h2>doughnuts
       <button data-title="doughnuts" class="delete-list">
         X
       </button>
     </h2>
-
     <ul>
-      <li>
-      Task: mocha
-      <br>
-      Priority: low
+        <li>
+        Task: mocha
+        <button data-list-title="doughnuts" data-task-name="mocha" class="delete-task">
+            X
+        </button>
+        <br>
+        Priority: low
       </li>
-
       <li>
-      Task: chocolate
-      <br>
-      Priority: high
+        Task: chocolate
+        <button data-list-title="doughnuts" data-task-name="chocolate" class="delete-task">
+          X
+        </button>
+        <br>
+        Priority: high
       </li>
-
     </ul>
   </div>
-  <!-- end list 1 -->
+<!--end list 1  -->
 
-  <!-- begin list 2 -->
+<!-- begin list 2 -->
   <div>
     <h2>chik fil a
       <button data-title="chik fil a" class="delete-list">
         X
       </button>
-      </h2>
+    </h2>
 
     <ul>
       <li>
-      Task: spicy chicken deluxe
-      <br>
-      Priority: high
+        Task: spicy chicken deluxe
+        <button data-list-title="chik fil a" data-task-name="spicy chicken deluxe" class="delete-task">
+          X
+        </button>
+        <br>
+        Priority: high
       </li>
-
       <li>
-      Task: waffle fries
-      <br>
-      Priority: high
+        Task: waffle fries
+        <button data-list-title="chik fil a" data-task-name="waffle fries" class="delete-task">
+        X
+        </button>
+        <br>
+        Priority: high
       </li>
     </ul>
-    </div>
-  <!-- end list 2 -->
+  </div>
+<!-- end list 2 -->
 </div>
 ```
 

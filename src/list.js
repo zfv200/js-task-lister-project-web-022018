@@ -1,14 +1,21 @@
 class List {
   constructor(title) {
     if (!title) throw new Error("Lists must have titles");
-
     this.title = title;
     this.tasks = [];
   }
 
-  addTask(description, priority) {
-    const newTask = new Task(description, priority);
-    this.tasks.push(newTask);
+  addTask(newTaskDescription, priority) {
+    if (this.tasks.find(({ description }) => newTaskDescription === description)) {
+      window.alert("Task descriptions must be unique");
+    } else {
+      const newTask = new Task(this, newTaskDescription, priority);
+      this.tasks.push(newTask);
+    }
+  }
+
+  deleteTask(taskDescription) {
+    this.tasks = this.tasks.filter(({ description }) => taskDescription !== description);
   }
 
   renderTasks() {
