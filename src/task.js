@@ -7,9 +7,11 @@ class Task {
 
   render() {
     return (
-      `<li>Task: ${this.description}
-      <br>
-      Priority: ${this.priority}</li>`
+      `<li>
+        Task: ${this.description}
+        <br>
+        Priority: ${this.priority}
+      </li>`
     );
   }
 }
