@@ -6,10 +6,14 @@ class TaskLister {
     this.newPriority = null;
   }
 
-  handleNewList(title) {
-    const newList = new List(title);
-    this.lists.push(newList);
-    this.activeList = newList;
+  handleNewList(newListTitle) {
+    if (this.lists.find(({ title }) => newListTitle === title)) {
+      window.alert("List titles must be unique");
+    } else {
+      const newList = new List(newListTitle);
+      this.lists.push(newList);
+      this.activeList = newList;
+    }
   }
 
   handleSelectChange(list) {
