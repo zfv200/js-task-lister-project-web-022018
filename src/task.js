@@ -1,6 +1,5 @@
 class Task {
   constructor(list, description, priority) {
-    if (!description) throw new Error("Form description should not be empty");
     this.list = list;
     this.description = description;
     this.priority = priority || "low";

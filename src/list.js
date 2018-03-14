@@ -1,6 +1,5 @@
 class List {
   constructor(title) {
-    if (!title) throw new Error("Lists must have titles");
     this.title = title;
     this.tasks = [];
   }
