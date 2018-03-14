@@ -14,6 +14,7 @@ class TaskLister {
 
   handleSelectChange(list) {
     this.activeList = this.lists.find(l => l.title === list);
+    console.log(this.activeList);
   }
 
   handleDescriptionChange(description) {
@@ -31,7 +32,8 @@ class TaskLister {
   }
 
   deleteList(listTitle) {
-    this.lists = this.lists.filter(({ title }) => title !== listTitle);
+    this.lists = this.lists.filter(({ title }) => listTitle !== title);
+    console.log(this.lists);
   }
 
   renderOptions() {
