@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   listDiv.addEventListener("click", e => {
-    if (e.target.className === "delete-list") app.deleteList(e.target.dataset.title);
-    // listDiv.innerHTML = app.render();
+    if (e.target.className === "delete-list") {
+      app.deleteList(e.target.dataset.title);
+      listDiv.innerHTML = app.render();
+    }
   });
 
   listDiv.addEventListener("submit", e => {
