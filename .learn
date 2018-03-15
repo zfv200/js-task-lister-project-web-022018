@@ -1,13 +1,15 @@
+tags:
+  - oo
+  - js
+  - javascript
+  - es6
+  - html
+  - dom manipulation
+  - js classes
+  - forms
+  - bdd
 languages:
   - javascript
-tags:
-  - js
-  - classical
-  - oo
-  - object oriented
-  - task list
-  - advanced
-resources:
-  - 2
-type:
-  - lab
+  - html
+  - css
+resources: 2
