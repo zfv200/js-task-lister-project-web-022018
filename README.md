@@ -107,5 +107,4 @@ templates for your markup:
 <!-- end list 2 -->
 </div>
 ```
-
 <a href='https://learn.co/lessons/fe-js-oo-task-list' data-visibility='hidden'>View this lesson on Learn.co</a>
