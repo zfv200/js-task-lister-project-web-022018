@@ -53,7 +53,7 @@ input[type="text"], select {
 	box-shadow: 2px 2px 0px #666;
 }
 
-input[type="submit"], button {
+input[type="submit"] {
 	background: linear-gradient(red, orange);
 	padding:5px 10px;
 	border:1px solid #333;
@@ -99,7 +99,23 @@ select {
 
 button {
 	position: relative;
+	background: linear-gradient(red, orange);
+	border:1px solid #333;
+	color:#000;
+	border-radius:5px;
+	box-shadow: 2px 2px 0px #666;
+	font-weight:bold;
 	top: -5px;
+}
+
+.delete-list {
+	padding:5px 10px;
+	font-size:14px;
+}
+
+.delete-task {
+	padding: 3px 5px;
+	font-size: 8px;
 }
 
 #lists h2 {

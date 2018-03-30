@@ -5,44 +5,24 @@
   <title>Flatiron Task Lister</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="node_modules/mocha/mocha.css"> -->
 </head>
 <body>
   <div id="main-content">
     <h1>Flatiron Task Lister</h1>
 
     <form id="create-list-form" action="#" method="post">
-      <label for="new-list-title">Add a new list:</label>
-      <input type="text" id="new-list-title" name="new-list-title" placeholder="title">
-      <input type="submit" value="Create New List">
-    </form><!-- #create-list-form -->
+     <label for="new-list-title">Add a new list:</label>
+     <input required type="text" id="new-list-title" name="new-list-title" placeholder="title">
+     <input type="submit" value="Create New List">
+    </form>
 
-    <form id="create-task-form" action="#" method="post">
-      <label for="parent-list">Select List:</label>
-      <select id="parent-list" name="parent-list"></select>
-      <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-      <label for="new-task-priority">Priority level:</label>
-      <input type="text" id="new-task-priority" name="new-task-priority" placeholder="priority">
-      <input type="submit" value="Create New Task">
-    </form><!-- #create-task-form -->
-
-    <section id="lists"></section>
+    <div id="app-content"></div>
 
 
-    <!-- <div> for Mocha to display test results. -->
-    <!-- <div id="mocha"></div>
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
-    <script src="node_modules/chai/chai.js"></script> -->
-    <script src="src/components/task.min.js"></script>
-    <script src="src/components/list.min.js"></script>
-    <script src="src/components/app.min.js"></script>
-    <script src="src/index.min.js"></script>
-    <!-- <script src="test/taskTest.js"></script>
-    <script src="test/listTest.js"></script>
-    <script src="test/appTest.js"></script>
-    <script src="node_modules/learn-browser/learnBrowser.min.js"></script> -->
+    <script src="src/index.js"></script>
+    <script src="src/taskLister.js"></script>
+    <script src="src/task.js"></script>
+    <script src="src/list.js"></script>
   </div><!-- #main-content -->
 
 </body>
