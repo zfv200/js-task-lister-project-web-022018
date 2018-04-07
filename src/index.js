@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // your solution here
-  // grab DOM elements
+  //my code here
+
+
   const listDiv = document.getElementById("app-content");
 
   const app = new TaskLister();
+
 });
