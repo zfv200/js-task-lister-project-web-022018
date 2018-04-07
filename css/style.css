@@ -17,7 +17,7 @@ body {
 }
 
 
-form, #lists div {
+form, .lists div {
 	border:1px solid #333;
 	background: rgba(255,255,255,.75);
 	padding:15px 20px 18px 18px;
@@ -26,13 +26,13 @@ form, #lists div {
 	box-shadow: 2px 5px 5px #333;
 }
 
-form, #lists div {
+form, .lists div {
 	width:31%;
 	float:left;
 	padding-top: 20px;
 }
 
-#lists {
+.lists {
 	clear:both;
 }
 
@@ -108,7 +108,7 @@ button {
 	font-weight:bold;
 	top: -5px;
 }
-/* 
+/*
 .app-contentz {
 	display: none;
 } */
@@ -124,6 +124,13 @@ button {
 }
 
 #lists h2 {
+	font-size: 2em;
+	color: #26558b;
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+
+#lists {
 	font-size: 2em;
 	color: #26558b;
 	line-height: 22px;

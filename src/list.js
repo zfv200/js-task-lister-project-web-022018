@@ -6,4 +6,5 @@ class List {
     this.title = title;
     this.id = ++listId;
   }
+  
 }
